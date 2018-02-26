@@ -8,7 +8,7 @@ def app
 end
 
 module ExpenseTracker
-  RSpec.describe 'Expense Tracker API' do
+  RSpec.describe 'Expense Tracker API', :aggregate_failures, :db do
     include Rack::Test::Methods
 
     def post_expense(expense)
